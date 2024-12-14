@@ -1,45 +1,42 @@
 variable "project_name" {
-    default = "expense"
+    default = "expense" 
 }
-
 variable "environment" {
     default = "dev"
+  
 }
-
 variable "common_tags" {
     default = {
         Project = "expense"
         Terraform = "true"
         Environment = "dev"
     }
+  
 }
-
-variable "mysql_sg_tags" {
+variable "mysql_tags" {
     default = {
         Component = "mysql"
     }
 }
-variable "backend_sg_tags" {
+variable "backend_tags" {
     default = {
-        Component = "backend"
+        Component ="backend"
     }
   
 }
-variable "frontend_sg_tags" {
+variable "frontend_tags" {
     default = {
-        Component ="frontend"
+        Component = "frontend"
     }
   
 }
-variable "bastion_sg_tags" {
-    default = {
-        Component = "bastion"
-    }
+variable "zone_name" {
+    default = "cheswini.shop"
   
 }
-variable "ansible_sg_tags" {
+variable "ansible_tags" {
     default = {
-        Component = "ansible"
+        Component = "frontend"
     }
   
 }
